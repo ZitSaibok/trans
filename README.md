@@ -1,9 +1,3 @@
-Here are several key literature reviews on corporate governance that you may find useful:
+模型的微调过程是将模型的全部参数进行更新，由于参数量大，在小样本学习时容易过拟合，导致测试性能较差。这种微调过程可以视为把预训练的权重参数W更新为W+ΔW，由于ΔW和W是完全相同的张量，因此参数量大。基于张量分解的参数高效微调方法可以理解为，将ΔW分解（也可以说是重参数化）为若干个参数量小的因子的张量乘积，例如ΔW=A*B*C，则微调过程变为优化W+A*B*C。由于A、B、C的参数量小，从而减少了优化的参数空间，避免过拟合。
 
-"The impact of corporate governance measures on firm performance" published in the Future Business Journal. This review explores both internal mechanisms (such as board structure and audit committees) and external mechanisms (including market control and investor activities) of corporate governance. It provides insights into how these mechanisms interact to influence firm performance, drawing on a range of empirical studies to discuss the effectiveness of different governance practices​ (SpringerOpen)​.
-
-"SME corporate governance: a literature review of informal mechanisms for governance" published by Emerald Insight. This paper focuses on the governance structures in small and medium enterprises (SMEs), highlighting informal mechanisms and their effectiveness compared to formal governance structures. It reviews various studies that examine the role of boards, advisory mechanisms, and ownership structures in SME governance​ (Emerald Insight)​.
-
-"Corporate Governance Research in Accounting and Auditing: Insights, Practice Implications, and Future Research Directions" published in AUDITING: A Journal of Practice & Theory. This comprehensive review discusses over 250 studies on corporate governance with a specific focus on board and audit committee issues. It provides valuable insights into the major findings in the field and suggests future research directions, aiming to improve research paradigms and explore new lines of inquiry​ (American Accounting Association)​.
-
-These papers offer a thorough overview of various aspects of corporate governance, from performance impacts to the specific challenges faced by SMEs and the insights gained from accounting and auditing perspectives. For deeper exploration, accessing these papers directly through academic databases or libraries will provide detailed methodologies, findings, and discussions.
+Transformer层输入的是长度可变的token序列，其计算量与token序列的长度至少成正比（部分算子为二次方），因此可以通过融合相似的token以及裁剪信息量低的token来减少输入长度，从而减少计算量。
